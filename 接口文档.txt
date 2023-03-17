@@ -1,0 +1,181 @@
+```txt
+  搜索商品接口
+  请求地址：http://www.kangliuyong.com:10002/search
+  请求类型： GET
+  请求参数： {
+    appkey: 你的appkey,
+    name: 商品关键字
+  }
+```
+
+```txt
+
+  banner接口
+  请求地址：http://www.kangliuyong.com:10002/banner
+  请求类型： GET
+  请求参数： {
+    appkey: 你的appkey
+  }
+
+```
+
+```txt
+
+  商品类型接口
+  请求地址：http://www.kangliuyong.com:10002/type
+  请求类型： GET
+  请求参数： {
+    appkey: 你的appkey
+  }
+
+```
+
+```txt
+
+  根据商品类型获取商品接口
+  请求地址：http://www.kangliuyong.com:10002/typeProducts
+  请求类型： GET
+  请求参数： {
+    appkey: 你的appkey,
+    key: '商品类型键名',
+    value: '商品类型值'
+  }
+
+  例如查看最新推荐商品(热卖推荐)
+    {
+      appkey: 你的appkey,
+      key: 'isHot',
+      value: 1
+    },
+
+  例如查看咖啡类型商品
+    {
+      appkey: 你的appkey,
+      key: 'type',
+      value: 'coffee'
+    }
+```
+```txt
+  查看商品详情接口
+  请求地址：http://www.kangliuyong.com:10002/productDetail
+  请求类型： GET
+  请求参数： {
+    appkey: 你的appkey,
+    pid: 商品pid
+  }
+```
+
+```txt
+  收藏商品接口
+  请求地址：http://www.kangliuyong.com:10002/like
+  请求类型： POST
+  请求参数： {
+    appkey: 你的appkey,
+    pid: 商品pid,
+    tokenString: token字符串
+  }
+```
+
+```txt
+  取消(删除)收藏商品接口
+  请求地址：http://www.kangliuyong.com:10002/notlike
+  请求类型： POST
+  请求参数： {
+    appkey: 你的appkey,
+    pid: 商品pid,
+    tokenString: token字符串
+  }
+```
+
+```txt
+  根据商品pid查询收藏商品接口
+  请求地址：http://www.kangliuyong.com:10002/findlike
+  请求类型： GET
+  请求参数： {
+    appkey: 你的appkey,
+    pid: 商品pid,
+    tokenString: token字符串
+  }
+```
+
+```txt
+  查询用户所有收藏商品接口
+  请求地址：http://www.kangliuyong.com:10002/findAllLike
+  请求类型： GET
+  请求参数： {
+    appkey: 你的appkey,
+    tokenString: token字符串
+  }
+```
+
+```txt
+  添加购物车商品接口
+  请求地址：http://www.kangliuyong.com:10002/addShopcart
+  请求类型： POST
+  请求参数： {
+    pid: 商品pid,
+    count: 商品数量,
+    rule: 商品规格,
+    appkey: 你的appkey,
+    tokenString: token字符串
+  }
+
+  其中商品rule格式为: 无糖/默认奶油,
+
+  返回值的
+    {
+      msg: '',
+      code: '',
+      status: '',
+      sid: ''
+    }
+
+  其中status = 0, 表示修改数量
+      status = 1, 添加一条新的数据
+
+  sid: 购物袋的唯一标识
+```
+
+```txt
+  查询购物车商品总数量接口
+  请求地址：http://www.kangliuyong.com:10002/shopcartCount
+  请求类型： GET
+  请求参数： {
+    appkey: 你的appkey,
+    tokenString: token字符串
+  }
+
+```
+
+```txt
+  获取购物车商品条目 (不是商品总数量)
+  请求地址：http://www.kangliuyong.com:10002/shopcartRows
+  请求类型： GET
+  请求参数： {
+    appkey: 你的appkey,
+    tokenString: token字符串
+  }
+
+```
+
+```txt
+  查询用户所有购物车数据接口
+  请求地址：http://www.kangliuyong.com:10002/findAllShopcart
+  请求类型： GET
+  请求参数： {
+    appkey: 你的appkey,
+    tokenString: token字符串
+  }
+
+```
+
+```txt
+  修改购物车商品数量接口
+  请求地址：http://www.kangliuyong.com:10002/modifyShopcartCount
+  请求类型： POST
+  请求参数： {
+    appkey: 你的appkey,
+    tokenString: token字符串,
+    sid: 购物车唯一标识,
+    count: 商品数量
+  }

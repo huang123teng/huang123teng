@@ -1,0 +1,145 @@
+.home {
+    .home-nav {
+        display: flex;
+        height: 46px;
+        line-height: 50px;
+        overflow: hidden;
+
+        .t1,
+        .t2 {
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .t2 {
+            width: 30px;
+            color: #00f;
+            margin-left: 5px;
+
+        }
+    }
+
+    /deep/ .home-search .van-icon {
+        color: 00adb5;
+    }
+
+    /deep/ .home-search {
+        overflow: hidden;
+        padding: 0;
+        border-radius: 17px;
+        top: -1px;
+    }
+
+    /deep/ .van-nav-bar_right {
+        overflow: hidden !important;
+    }
+
+    .home-content {
+        padding: 10px 10px 0 10px;
+    }
+
+    .banner-box {
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .product-box {
+        padding: 10px;
+
+        .pro-title-box {
+            background-color: #fff;
+            padding: 10px 0;
+
+
+
+            .pro-title {
+                display: inline-block;
+                background-color: #00adb5;
+                color: #fff;
+                padding: 0 15px;
+                height: 32px;
+                line-height: 32px;
+                font-size: 14px;
+                border-top-right-radius: 16px;
+            }
+        }
+
+        .product {
+            margin-top: 10px;
+            //margin-bottom: 15px;
+
+            .pro-item {
+                width: calc(~"50% - 25px");
+                background-color: #fff padding 10px;
+                border-radius: 8px;
+                margin-right: 40px;
+                margin-bottom: 10px;
+
+                &:nth-child(2n) {
+
+
+                    margin-right: 0px;
+                }
+
+
+                .img-box {
+                    border-radius: 8px;
+                    overflow: hidden;
+                    position: relative;
+
+                    .hot {
+                        position: absolute;
+                        top: 0;
+                        left: 8px;
+                        width: 24px;
+                        height: 24px;
+                        text-align: center;
+                        line-height: 24px;
+                        color: #eeeeee;
+                        background-color: #00adb5;
+                        border-bottom-left-radius: 5px;
+                        border-bottom-right-radius: 5px;
+                        font-size: 12px;
+                    }
+                }
+
+                .pro-info {
+                    margin-top: 10px;
+                    text-align: center;
+
+                    .pro-name {
+                        font-size: 18px;
+                        margin-bottom: 5px;
+                    }
+
+                    .pro-enname {
+                        color: #999;
+                        font-size: 12px;
+                        margin-bottom: 10px;
+                    }
+
+                    .pro-price {
+                        color: #00adb5;
+                        font-weight: bold;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+    .hello_world{
+        // height: 5000px;
+        position: relative;
+
+    }
+    .scrollTop{
+        position: fixed;
+        width: 30px;
+        height: 30px;
+        bottom: 50px;
+        right: 100px;
+        background-color: aqua;
+        display: none;
+        z-index: 1000;
+    }
+}
